@@ -79,7 +79,7 @@ def get_user(username: str):
         return None
 
 def update_password(name: str, contra: str):
-    database_users[name.password] = contra
+    database_users[name].password = contra
     return contra
 
 def create_user(new_user: UserInDB):
