@@ -90,6 +90,5 @@ def create_user(new_user: UserInDB):
 
 def login(name: str, contra: str):
     for i,j in database_users.items():
-        #print(i, j.password)
         if name == i and contra == j.password:
             print("Match")
