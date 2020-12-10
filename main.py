@@ -19,7 +19,6 @@ async def update_pass(name: passUpdate):
     user_in_db = get_user(name.nombre)
     if user_in_db == None:
         raise HTTPException(status_code=404,detail="El usuario no existe")
-    else:
-        update_password(user_in_db.nombre,user_in_db.password)
-        pass_out = passOut(**user_in_db.dict())
-        return pass_out
+    update_password(user_in_db.nombre,user_in_db.password)
+    pass_out = passOut(**user_in_db.dict())
+    return pass_out
