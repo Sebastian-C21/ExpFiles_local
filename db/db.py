@@ -14,6 +14,7 @@ class UserInDB(BaseModel): #así se hace la herencia le python
  
 class UserOut(BaseModel):
     nombre: str
+    password: str
     apellido: str
     correo: str
 
