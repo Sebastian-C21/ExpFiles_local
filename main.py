@@ -17,5 +17,3 @@ async def get_data(username: str):
 @api.put("/user/updateUser/")
 async def update_pass(name: passUpdate):
     update_pass_(name)
-
-print("hola mundo")
