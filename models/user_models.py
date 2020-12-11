@@ -1,4 +1,3 @@
-from db.user_db import get_usr_id
 from pydantic import BaseModel
 
 class UserIn(BaseModel):
@@ -6,5 +5,5 @@ class UserIn(BaseModel):
     email: str
 
 class UserOut(BaseModel):
-    usr_in: str
+    usr_id: str
     name: str

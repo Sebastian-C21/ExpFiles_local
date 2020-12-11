@@ -68,7 +68,7 @@ database_users = {
 	}),
 }
 
-def get_usr_id(user_id: str):
+def get_usr_id(user_id: int):
     if user_id in database_users.keys():
         return database_users[user_id]
     else:

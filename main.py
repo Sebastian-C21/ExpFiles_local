@@ -1,4 +1,5 @@
-from db.user_db import UserInDB, get_user, update_pass_, update_password, UserOut, passUpdate, passOut
+from db.user_db import User, get_user
+from models.user_models import UserIn, UserOut
 
 import datetime
 from fastapi import FastAPI
@@ -15,5 +16,5 @@ async def get_data(username: str):
     return user_out
 
 @api.put("/user/updateUser/")
-async def update_pass(name: passUpdate):
-    update_pass_(name)
+async def update_email(name: User):
+    user_in_db = get_user(name.usr_id)
